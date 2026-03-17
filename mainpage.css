@@ -1,0 +1,301 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Nevanta';
+    src: url('fonts/Nevanta-Black.otf') format('truetype');
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+    min-height: 200vh;
+    font-family: 'Nevanta', sans-serif;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("logo.png");
+    background-size: 30%;
+    background-position: center 65%;
+    background-repeat: no-repeat;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav-bar{
+    background-color: #86100E;
+    max-width: 2200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    width: 100%;
+    color: white;
+}
+
+.logo{
+    height: 100px;
+    margin-left: 100px;
+}
+
+.Name{
+    color: white;
+    font-size: 30px;
+    margin-left: 15px;
+    flex: 1;
+}
+
+.Name a{
+    color: white;
+    text-decoration: none;
+}
+
+.nav-bar ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-right:100px;
+}
+
+.nav-bar ul li{
+    position: relative;
+    padding: 15px 20px;
+}
+
+.nav-bar ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.nav-bar ul li:hover{
+    background-color: rgb(179,46,46);
+    border-radius: 3px;
+}
+
+
+.sub-nav-1{
+    display: none;
+}
+
+.hover, .nav-bar ul li:hover .sub-nav-1 {
+    display: block;
+    position: absolute;
+    background-color: rgb(179, 46, 46);
+    margin-top: 14px;
+    margin-left: -20px;
+}
+
+.hover, .nav-bar ul li:hover .sub-nav-1 ul {
+    display: block;
+    margin: 20px;
+}
+
+.hover, .nav-bar ul li:hover .sub-nav-1 ul li {
+    width: 200px;
+    padding: 10px;
+    border-bottom: 1px dotted white;
+    background: transparent;
+    border-radius: 0px;
+    text-align: left;
+    margin-top: 15px;
+}
+
+.hover, .nav-bar ul li:hover .sub-nav-1 ul li:last-child {
+    border-bottom: none;
+}
+
+.hover, .nav-bar ul li:hover .sub-nav-1 ul li a:hover {
+    color: rgb(22, 22, 22);
+}
+
+.carousel {
+    margin: -130px auto;
+    display: flex;
+    overflow-x: auto;
+    gap: 1em;
+    box-shadow:0 10px 30px rgba(0,0,0,0.15);
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    animation: spin 25s infinite linear;
+    padding-right: 1em;
+}
+.card {
+    flex: 0 0 1050px;
+    height: 600px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.card img{
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes spin {
+    from {translate: 0;}
+    to {translate: -100%;}
+}
+
+.com {
+    margin: 170px auto;
+    font-size: 50px;
+    color: rgb(22, 22, 22);
+}
+
+.info1 {
+    margin: 200px;
+    font-size: 25px;
+    color: #556070;
+}
+
+.info2 {
+    margin: 150px;
+    margin-top: 50px;
+    font-size: 23px;
+    color: #556070;
+    padding: 40px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.15);
+    background-color: white;
+    border-radius: 12px;
+}
+
+.hero{
+    height: 350px;
+    display: flex;
+    align-items: center;
+    padding: 60px;
+    margin: 100px;
+    background:
+    linear-gradient(to right, rgba(22, 22, 22) 3%, rgba(22, 22, 22) 50%, transparent),
+    url("img.png");
+
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.hero-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.features {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 80px;
+  padding: 40px;
+  font-family: 'Nevanta', sans-serif;
+}
+
+.feature-box {
+  width: 360px;
+  margin-top: -100px;
+}
+
+.feature-box h2 {
+  font-size: 54px;
+  margin-bottom: 10px;
+}
+
+.feature-box p {
+  font-size: 27px;
+  padding: 40px;
+  color: #4d4d4d;
+  box-shadow:0 10px 30px rgba(0,0,0,0.15);
+  background-color: white;
+  border-radius: 12px;
+}
+
+.philosophy {
+    margin-top: -100px;
+}
+
+.philo {
+   font-size: 44px; 
+}
+
+.footer{
+background:#86100E;
+color:white;
+padding:60px 80px;
+font-family: Arial, sans-serif;
+}
+
+.footer-container{
+display:flex;
+justify-content:space-between;
+gap:50px;
+}
+
+.footer-col h3{
+margin-bottom:15px;
+}
+
+.footer-col h3 a{
+color: white;         
+text-decoration: none;  
+}
+
+.footer-col p{
+margin:6px 0;
+color:white;
+font-size:14px;
+}
+
+.footer-col p a{
+color: white;         
+text-decoration: none;  
+}
+
+.footer-coll p{
+margin:6px 0;
+color:white;
+font-size:14px;
+text-align: right;
+}
+
+.badges{
+margin-top:15px;
+display:flex;
+gap:10px;
+}
+
+.badges img{
+width:60px;
+margin-left: 90px;
+}
+
+.copyright{
+margin-top:20px;
+font-size:12px;
+color:#aaa;
+}
